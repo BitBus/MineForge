@@ -1,0 +1,6 @@
+author: TTGX12
+database: false
+main: com.mineforge.main.Main
+name: MineForge Main
+startup: postworld
+version: '1.1'
