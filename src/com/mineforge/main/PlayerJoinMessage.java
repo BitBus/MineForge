@@ -19,6 +19,7 @@ public class PlayerJoinMessage extends JavaPlugin implements Listener {
 		final Player p = event.getPlayer();
 		event.setJoinMessage(ChatColor.GOLD + p.getName() + ChatColor.BLUE + " joined " +  ChatColor.GREEN + "Mine" + ChatColor.RED + "Forge!");
 	}
+    //Yes, I know, I'm mean to some people. Buahaha.
 	@EventHandler(priority = EventPriority.HIGH)
 	public void onPlayerPreConnect(final PlayerLoginEvent event) {
 		if(event.getPlayer().getName().equals("huntgus24")) {
@@ -35,12 +36,8 @@ public class PlayerJoinMessage extends JavaPlugin implements Listener {
 		final Player p = event.getPlayer();
 		event.setLeaveMessage(ChatColor.GOLD + p.getName() + ChatColor.RED + " was kicked for " + event.getReason());
 	}
-	@EventHandler(priority = EventPriority.HIGH)
-	public void PlayerChatEvent(final AsyncPlayerChatEvent event) {
-		if(event.getPlayer().getName() == "huntgus24"){
-			event.setCancelled(true);
-		}
-		}
+    // These are Murder Message Events, I didn't think we needed them at this point, so I dropped them for now.
+    //
 	//@EventHandler(priority = EventPriority.HIGH)
 	//public void onPlayerDied(final PlayerDeathEvent event) {
 	//	final Player p = event.getEntity();
